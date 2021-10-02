@@ -10,7 +10,7 @@
     <h1>Session Page </h1>
     <h2>
         {{$name}}
-        {{$city}}
+        {{-- {{$city}} --}}
     </h2>
 </body>
 </html>

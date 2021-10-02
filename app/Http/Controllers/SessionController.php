@@ -11,15 +11,21 @@ class SessionController extends Controller
         //request instance
 
         //storing data 
-          $request->session()->put('name','Ans');
+        //   $request->session()->put('name','Ans');
+          //global
+          session(['name'=>'Basit']);
+// retrieve globaly
+          $name=session('name');
+
+          $data=['name'=>$name];
 
           //retreiving data 
-          $name =    $request->session()->get('name');
-          $city =    $request->session()->get('city','Slw');
-            $all= $request->session()->all();
+        //   $name =    $request->session()->get('name');
+        //   $city =    $request->session()->get('city','Slw');
+        //     $all= $request->session()->all();
         
-        //   dd($name);UUUUUUUU
-        // return view('session',['name'=>$name,'city'=>$city,'all'=>$all]);
+        //   dd($name);
+        return view('session',$data);
 
     }
 }
