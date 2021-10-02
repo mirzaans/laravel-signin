@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SessionController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('/redirects',[ProjectController::class,'index']);
+
+Route::get('/session',[SessionController::class,'session']);
+
 // Route::post('/addseller',[ProjectController::class,'addseller']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
